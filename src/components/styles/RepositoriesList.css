@@ -1,0 +1,13 @@
+.list-container {
+  max-width: 1200px;
+  padding: 30px;
+  margin: 30px auto 0;
+  background-color: rgba(240, 248, 255, 0.39);
+  border-radius: 10px;
+}
+
+.repo-list {
+  padding: 20px;
+  background-color: rgba(155, 131, 212, 0.075);
+  list-style: none;
+}

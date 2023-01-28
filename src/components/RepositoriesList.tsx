@@ -1,21 +1,27 @@
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import RepositoryItem from './RepositoryItem';
+import './styles/RepositoriesList.css';
 
 const RepositoriesList = (): JSX.Element => {
   const { data, error, loading } = useTypedSelector(
     (state) => state.repositories
   );
-  // console.log(data);
 
   return (
-    <ul>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        data.map((item) => <RepositoryItem key={item} item={item} />)
+    <>
+      {data.length > 0 && (
+        <section className="list-container">
+          <ul className="repo-list">
+            {loading ? (
+              <p>Loading...</p>
+            ) : (
+              data.map((item) => <RepositoryItem key={item} item={item} />)
+            )}
+            {error && <h2>Network error!</h2>}
+          </ul>
+        </section>
       )}
-      {error && <h2>Network error!</h2>}
-    </ul>
+    </>
   );
 };
 

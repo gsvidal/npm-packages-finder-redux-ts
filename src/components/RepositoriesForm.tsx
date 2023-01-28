@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { useActions } from '../hooks/useActions';
-import RepositoriesList from './RepositoriesList';
+import './styles/RepositoriesForm.css';
 
 const RepositoriesForm = (): JSX.Element => {
   const [term, setTerm] = useState<string>('');
@@ -16,11 +16,16 @@ const RepositoriesForm = (): JSX.Element => {
     searchRepositories(term);
   };
   return (
-    <form action="" onSubmit={handleSubmit}>
-      <label htmlFor="">Insert a term:</label>
-      <input type="text" value={term} onChange={handleChange} />
+    <form action="" onSubmit={handleSubmit} className="form">
+      <label htmlFor="input"></label>
+      <input
+        id="input"
+        type="text"
+        value={term}
+        onChange={handleChange}
+        placeholder="Search packages"
+      />
       <button>Search</button>
-      <RepositoriesList />
     </form>
   );
 };

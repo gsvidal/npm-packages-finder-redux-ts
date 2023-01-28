@@ -4,7 +4,8 @@ import { ActionType } from '../action-types';
 import { Action } from '../actions';
 
 interface Item {
-  name: string;
+  name?: string;
+  links: { npm: string };
 }
 
 interface Package {
@@ -33,12 +34,12 @@ export const searchRepositories = (term: string) => {
         },
       });
 
-      const packageNames = data.results.map(
-        (item: Package) => item.package.name
+      const packageLinks = data.results.map(
+        (item: Package) => item.package.links.npm
       );
       dispatch({
         type: ActionType.SEARCH_REPOSITORIES_SUCCESS,
-        payload: packageNames,
+        payload: packageLinks,
       });
     };
 
