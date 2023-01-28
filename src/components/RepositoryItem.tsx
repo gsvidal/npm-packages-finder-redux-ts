@@ -7,7 +7,9 @@ type RepositoryItemProps = {
 const RepositoryItem = ({ item }: RepositoryItemProps): JSX.Element => {
   return (
     <li className="item">
-      <a href={item}>{item}</a>{' '}
+      <a target="_blank" href={item}>
+        {item}
+      </a>
     </li>
   );
 };
