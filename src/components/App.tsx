@@ -1,12 +1,12 @@
-import RepositoriesList from './RepositoriesList';
+import RepositoriesForm from './RepositoriesForm';
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <>
       <h1>Search for a package:</h1>
-      <RepositoriesList />
+      <RepositoriesForm />
     </>
   );
-}
+};
 
 export default App;
