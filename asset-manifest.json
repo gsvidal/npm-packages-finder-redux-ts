@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/npm-packages-finder-redux-ts/static/css/main.a57a877c.css",
+    "main.js": "/npm-packages-finder-redux-ts/static/js/main.53694271.js",
+    "index.html": "/npm-packages-finder-redux-ts/index.html",
+    "main.a57a877c.css.map": "/npm-packages-finder-redux-ts/static/css/main.a57a877c.css.map",
+    "main.53694271.js.map": "/npm-packages-finder-redux-ts/static/js/main.53694271.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a57a877c.css",
+    "static/js/main.53694271.js"
+  ]
+}
