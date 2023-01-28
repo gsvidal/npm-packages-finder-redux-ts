@@ -11,8 +11,12 @@ interface Package {
   package: Item;
 }
 
-interface Response {
+interface ResponseData {
   results: Package[];
+}
+
+interface Response {
+  data: ResponseData;
 }
 
 export const searchRepositories = (term: string) => {
@@ -22,13 +26,16 @@ export const searchRepositories = (term: string) => {
     });
 
     const fetchData = async () => {
-      const BASE_URL = 'https://api.npms.io/v2/search?q=react';
-      const { results }: Response = await axios.get(BASE_URL, {
+      const BASE_URL = 'https://api.npms.io/v2/search';
+      const { data }: Response = await axios.get(BASE_URL, {
         params: {
-          text: term,
+          q: term,
         },
       });
-      const packageNames = results.map((item: any) => item.package.name);
+
+      const packageNames = data.results.map(
+        (item: Package) => item.package.name
+      );
       dispatch({
         type: ActionType.SEARCH_REPOSITORIES_SUCCESS,
         payload: packageNames,
