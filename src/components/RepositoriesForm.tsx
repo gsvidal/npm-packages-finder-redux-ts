@@ -1,9 +1,10 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState, useEffect } from 'react';
 import { useActions } from '../hooks/useActions';
 import './styles/RepositoriesForm.css';
 
 const RepositoriesForm = (): JSX.Element => {
   const [term, setTerm] = useState<string>('');
+  const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(true);
 
   const { searchRepositories } = useActions();
 
@@ -18,6 +19,15 @@ const RepositoriesForm = (): JSX.Element => {
       searchRepositories(term);
     }
   };
+
+  useEffect(() => {
+    if (term === '') {
+      setIsButtonDisabled(true);
+    } else {
+      setIsButtonDisabled(false);
+    }
+  }, [term]);
+
   return (
     <form action="" onSubmit={handleSubmit} className="form">
       <label htmlFor="input"></label>
@@ -28,7 +38,9 @@ const RepositoriesForm = (): JSX.Element => {
         onChange={handleChange}
         placeholder="Search packages"
       />
-      <button>Search</button>
+      <button className="button" disabled={isButtonDisabled}>
+        Search
+      </button>
     </form>
   );
 };

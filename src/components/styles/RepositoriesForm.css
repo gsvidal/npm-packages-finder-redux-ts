@@ -19,7 +19,7 @@ input {
   border-radius: 5px;
 }
 
-button {
+.button {
   padding: 15px 25px;
   margin: 0 15px;
   border: none;
@@ -34,6 +34,17 @@ button:hover {
 
 button:active {
   background-color: rgba(0, 0, 255, 0.19);
+}
+
+button:disabled {
+  color: white;
+  background-color: rgb(196, 196, 196);
+  cursor: not-allowed;
+}
+
+.button--disabled:hover,
+.button--disabled:active {
+  background-color: rgb(196, 196, 196);
 }
 
 @media screen and (min-width: 600px) {
