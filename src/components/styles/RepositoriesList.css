@@ -11,3 +11,25 @@
   background-color: rgba(155, 131, 212, 0.075);
   list-style: none;
 }
+
+.message {
+  display: inline-block;
+  padding: 20px 45px;
+  margin-top: 50px;
+  font-style: normal;
+  font-size: 1.35rem;
+  color: black;
+  border-radius: 5px;
+  background-color: rgba(0, 255, 255, 0.26);
+  border: 2px solid rgba(0, 255, 255, 0.56);
+}
+
+.message--loading {
+  background-color: rgba(0, 0, 255, 0.26);
+  border: 2px solid rgba(0, 0, 255, 0.56);
+}
+
+.message--error {
+  background-color: rgba(255, 0, 0, 0.26);
+  border: 2px solid rgba(255, 0, 0, 0.56);
+}

@@ -4,6 +4,7 @@ import './styles/RepositoriesForm.css';
 
 const RepositoriesForm = (): JSX.Element => {
   const [term, setTerm] = useState<string>('');
+
   const { searchRepositories } = useActions();
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -13,7 +14,9 @@ const RepositoriesForm = (): JSX.Element => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     //When user submits the form we call the action creator and that's going to make the request to the npm api for us
-    searchRepositories(term);
+    if (term !== '') {
+      searchRepositories(term);
+    }
   };
   return (
     <form action="" onSubmit={handleSubmit} className="form">
