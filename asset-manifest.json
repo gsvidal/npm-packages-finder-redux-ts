@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/npm-packages-finder-redux-ts/static/css/main.77c9d3cf.css",
-    "main.js": "/npm-packages-finder-redux-ts/static/js/main.0ea04df7.js",
+    "main.css": "/npm-packages-finder-redux-ts/static/css/main.1edbe72b.css",
+    "main.js": "/npm-packages-finder-redux-ts/static/js/main.cfdfc496.js",
     "index.html": "/npm-packages-finder-redux-ts/index.html",
-    "main.77c9d3cf.css.map": "/npm-packages-finder-redux-ts/static/css/main.77c9d3cf.css.map",
-    "main.0ea04df7.js.map": "/npm-packages-finder-redux-ts/static/js/main.0ea04df7.js.map"
+    "main.1edbe72b.css.map": "/npm-packages-finder-redux-ts/static/css/main.1edbe72b.css.map",
+    "main.cfdfc496.js.map": "/npm-packages-finder-redux-ts/static/js/main.cfdfc496.js.map"
   },
   "entrypoints": [
-    "static/css/main.77c9d3cf.css",
-    "static/js/main.0ea04df7.js"
+    "static/css/main.1edbe72b.css",
+    "static/js/main.cfdfc496.js"
   ]
 }
