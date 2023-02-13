@@ -1,6 +1,8 @@
 # NPM Finder
 
-<a href="https://www.gonzalovidal.dev/budget-planner-2.0/">
+### [Check out the deployed app!](https://www.gonzalovidal.dev/npm-packages-finder-redux-ts/)
+
+<a href="https://www.gonzalovidal.dev/npm-packages-finder-redux-ts/">
   <img src="https://i.postimg.cc/DwR4xM7k/npm-finder-redux-ts.gif" width="700">
 </a> 
 
